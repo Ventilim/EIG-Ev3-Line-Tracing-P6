@@ -145,10 +145,10 @@ The barrier sits between START and END B so robots can't drive straight down to 
 ### Hard Map Sections
 | Section | Route | What your robot must do |
 |---------|-------|-------------------------|
-| **Section 1** | START → CP1 | Follow three tight, rounded waves, then a 90° drop and a straight |
+| **Section 1** | START → CP1 | Follow the rounded waves (three tops), then a 90° drop and a straight |
 | **Section 2** | CP1 → FORK → CP2 | Pass the FORK going **down** and reach CP2 |
 | **Section 3a: Block mission** | CP2 → TURN → block → back to FORK → END 1 | Turn off at yellow, collect the block, return along the line, go **up** at the FORK and deliver the block into END 1 |
-| **Section 3b: Zigzag route** | CP2 → zigzag → END 2 | Follow the sharp zigzag without touching the walls and stop in END 2 |
+| **Section 3b: Zigzag route** | CP2 → zigzag → END 2 | Follow the zigzag without touching the walls between its points and stop in END 2 |
 
 ### What the Colours Mean (Hard Map)
 | Colour | What it is | What it means for your robot |
@@ -190,35 +190,35 @@ All the Easy Map run rules apply, with these changes:
 5. **Reset:** The block is put back in the same place before every run.
 
 ### Hard Map Setup
-Same mat size: **200 cm × 120 cm**, positions in cm from the **top-left corner**.
+Mat size: **200 cm × 100 cm** (2 m × 1 m), positions in cm from the **top-left corner**.
 
 | Item | Size | Position |
 |------|------|----------|
 | START zone | 35 × 35 cm | x 5 to 40, y 5 to 40 |
-| END 1 | 28 × 28 cm, green | x 164 to 192, y 8 to 36 |
-| END 2 | 35 × 35 cm, green | x 5 to 40, y 80 to 115 |
-| Wavy line | 2 cm tape | (40, 24) → (46.5, 24), then three rounded waves to x = 104 (tops at y 9 near x 52, 74 and 96; bottoms at y 39 near x 63 and 85), then straight down to (104, 43) |
-| Straight to FORK | 2 cm tape | (104, 43) → FORK (145, 43) |
-| Branch to END 1 | 2 cm tape | FORK (145, 43) → (166, 22) → (176, 22), ending inside END 1 |
-| Line down to zigzag | 2 cm tape | FORK (145, 43) → (145, 103) |
-| Zigzag to END 2 | 2 cm tape | (145, 103) → (125, 83) → (107, 104) → (86, 81) → (70, 104) → (55.5, 83) → (40, 104) → (25, 104), ending inside END 2 |
-| Side line to block | 2 cm tape | TURN (145, 66) → (162, 66) |
-| CP1 (blue) | 8 × 8 cm | (120, 43) |
-| FORK (red) | 8 × 8 cm | (145, 43) |
-| CP2 (blue) | 8 × 8 cm | (145, 55) |
-| TURN (yellow) | 8 × 8 cm | (145, 66) |
-| Block (dark blue) | about 8 × 8 × 8 cm | x 162 to 170, y 62 to 70 |
-| Tall wall | 12 cm thick, at least 5 cm tall | x 136 to 148, y 0 to 35 |
-| Zigzag walls | 2 cm thick, at least 5 cm tall | x 55.5, y 90 to 112 · x 70, y 77 to 96 · x 86, y 88 to 112 · x 107, y 77 to 96 · x 125, y 90 to 112 |
-| Barrier | 90 cm long, 5 cm thick | x 0 to 90, y 60 to 65 |
+| END 1 | 28 × 28 cm, green | x 164 to 192, y 5 to 33 |
+| END 2 | 35 × 35 cm, green | x 5 to 40, y 54 to 89 |
+| Wavy line | 2 cm tape | (40, 24) → (46.5, 24), then 2½ rounded waves to (112, 24) (tops at y 18 near x 53, 79 and 105.5; bottoms at y 30 near x 66 and 92), then straight down to (112, 40) |
+| Straight to FORK | 2 cm tape | (112, 40) → FORK (145, 40) |
+| Branch to END 1 | 2 cm tape | FORK (145, 40) → (166, 19) → (176, 19), ending inside END 1 |
+| Line down to zigzag | 2 cm tape | FORK (145, 40) → (145, 64) |
+| Zigzag to END 2 | 2 cm tape | (145, 64) → (123, 86) → (101, 64) → (79, 86) → (57, 64) → (25, 64), ending inside END 2 |
+| Side line to block | 2 cm tape | TURN (145, 58) → (162, 58) |
+| CP1 (blue) | 8 × 8 cm | (128.5, 40) |
+| FORK (red) | 8 × 8 cm | (145, 40) |
+| CP2 (blue) | 8 × 8 cm | (145, 49) |
+| TURN (yellow) | 8 × 8 cm | (145, 58) |
+| Block (dark blue) | about 8 × 8 × 8 cm | x 162 to 170, y 54 to 62 |
+| Tall wall | 12 cm thick, at least 5 cm tall | x 136 to 148, y 0 to 22 |
+| Zigzag walls | 2 cm thick, at least 5 cm tall | x 123, y 56 to 70 · x 101, y 80 to 99 · x 79, y 56 to 70 |
+| Barrier | 90 cm long, 5 cm thick | x 0 to 90, y 47 to 52 |
 
-**Facilitators:** test the Hard Map with a real robot before the event. The waves and the gaps around the zigzag walls are tight for a standard EV3 robot, so you may need to print the map larger.
+**Facilitators:** this layout was checked in a computer simulation with a standard EV3 driving base (about 15 cm wide and 19 cm long). All three routes could be completed, and the robot never hangs over the edge of the 2 m × 1 m mat. Keep the walls at the positions above: moving them closer to the line makes the map impossible. Still do a test run with a real robot before the event.
 
 ### Hard Map Hints
 - **Waves:** slow down and use a smooth (proportional) line follower. A simple left-right follower will lose the line on tight curves.
 - **FORK:** decide which way to go when you see **red**. Count how many times you've passed it if your robot comes back.
 - **Block mission:** spot **yellow** to turn off. After collecting the block, drive back to the line and follow it up to the FORK.
-- **Zigzag:** the walls are there so you can't cut corners. Follow the line closely at the sharp points.
+- **Zigzag:** the walls are there so you can't cut corners. Slow down before each point of the zigzag and follow the line closely.
 - **END zones:** spot **green** to know when to stop.
 
 
